@@ -1,0 +1,63 @@
+.container {
+    margin-top: 30px;
+}
+header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+header h1 {
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 50px;
+    text-align: center;
+    font-size: 3.5em;
+}
+.jumbotron {
+    text-align: center;
+    margin: 0;
+}
+.jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+}
+footer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e5e5;
+    font-size: .9em;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+@media (max-width: 767px) {
+    header .nav {
+        margin-bottom: 15px;
+    }
+    header .nav li {
+        width: 100%;
+    }
+    header .nav li a {
+        text-align: center;
+        font-size: 1.4em;
+        border-radius: 0;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+    header h1{
+        float: left;
+    }
+    header .nav {
+        float: right;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+    .container .jumbotron {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
