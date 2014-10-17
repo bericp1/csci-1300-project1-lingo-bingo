@@ -25,3 +25,12 @@ suggested you play it this way since you'll be able to see a running leaderboard
 
 All static files for the very minimal front end are found in the `static` directory. Screenshots can be found in the
 `screenshots` directory.
+
+# Screenshots
+
+![Home](screenshots/home.png)
+![Loading](screenshots/loading.png)
+![Playing](screenshots/playing.png)
+![Right](screenshots/right.png)
+![Wrong](screenshots/wrong.png)
+![Leaderboard](screenshots/leaderboard.png)
