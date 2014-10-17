@@ -17,10 +17,15 @@ header h1 {
     text-align: center;
     margin: 0;
 }
-.jumbotron .btn {
+.jumbotron .btn, .jumbotron .form-control {
     padding: 14px 24px;
     font-size: 21px;
+    height: auto;
 }
+.loading {text-align: center; margin: 70px auto; max-width: 600px;}
+.loading h2 {margin: 40px auto; font-size: 2.1em; line-height: 1.2em;}
+.loading span {font-weight: bold;}
+.game textarea {width: 100%; font-family: Consolas, "Liberation Mono", Courier, monospace; min-height: 400px;}
 footer {
     margin-top: 15px;
     padding-top: 15px;

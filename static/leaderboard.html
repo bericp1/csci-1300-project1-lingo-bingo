@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LingoBingo | Leaderboard</title>
+
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <header class="clearfix">
+        <h1 class="text-muted">LingoBingo</h1>
+        <ul class="nav nav-pills">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/leaderboard.html">Leaderboard</a></li>
+        </ul>
+    </header>
+    <div class="loading">
+        <h2>Loading the leaderboard...</h2>
+        <img src="loading.gif">
+        <small>Also, thanks to /u/noble_radon on reddit for the loading gif :D</small>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Started</th>
+            <th>Finsihed</th>
+            <th>Score</th>
+            <th>Rank</th>
+            <th>Player</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="game-started"></td>
+            <td class="game-finished"></td>
+            <td class="game-score"></td>
+            <td class="game-rank"></td>
+            <td class="game-player"></td>
+        </tr>
+        </tbody>
+    </table>
+    <footer class="text-muted">
+        &copy; Brandon Phillips 2014
+    </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="leaderboard.js"></script>
+</body>
+</html>

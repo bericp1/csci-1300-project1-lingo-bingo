@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LingoBingo</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="sweet-alert.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -21,20 +22,50 @@
         <h1 class="text-muted">LingoBingo</h1>
         <ul class="nav nav-pills">
             <li class="active"><a href="/">Home</a></li>
+            <li><a href="/leaderboard.html">Leaderboard</a></li>
         </ul>
     </header>
     <div class="jumbotron">
-        <h1>[something]</h1>
-        <p>Test your skill at identifying the hundreds of different programming languages out there in a fun
-        game of bingo.</p>
-        <a href="#" class="btn btn-lg btn-primary">Play Now</a>
+        <h1>Do you know code?</h1>
+        <p>Test your skill at identifying the hundreds of different programming languages out there by taking a quick quiz.</p>
+        <p>You'll be asked to identify 10 snippets of code pulled from Github at the time you hit the start button.</p>
+        <p>The faster you go, the higher you rank.</p>
+        <p>Enter your name  and hit start to try it out.</p>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Name">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="button">Start</button>
+            </span>
+        </div>
     </div>
+    <div class="loading">
+        <h2><span></span>, your game is being generated...</h2>
+        <img src="loading.gif">
+        <h2>I'm fetching the latest public gists from Github and compiling them into a quiz for you...</h2>
+        <h2>Right when you see the quiz, your time starts so don't dilly-dally!</h2>
+        <small>Also, thanks to /u/noble_radon on reddit for the loading gif :D</small>
+    </div>
+    <form class="game" method="post" action="/submit">
+        <div class="snippet-template well">
+            <textarea></textarea>
+            <div class="btn-group" data-toggle="buttons">
+            </div>
+        </div>
+        <label class="button-template btn btn-primary">
+            <input type="radio"> <span></span>
+        </label>
+        <div class="info well"></div>
+        <div class="q-area"></div>
+        <input type="submit" value="Submit Quiz" class="btn btn-lg btn-block btn-primary">
+    </form>
     <footer class="text-muted">
         &copy; Brandon Phillips 2014
     </footer>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="sweet-alert.js"></script>
+<script src="bootstrap.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
