@@ -18,12 +18,6 @@ mongodb_url = os.environ.get('MONGOLAB_URI', False)
 if mongodb_url: connect('lingobingo', host=mongodb_url)
 else: connect('lingobingo')
 
-ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', False)
-if not ADMIN_PASSWORD:
-    ADMIN_PASSWORD = ''.join(random.choice(string.ascii_letters + string.digits + '!_-$#@') for _ in range(8))
-    print('\nPassword for admin interface (auto-generated):\t' + ADMIN_PASSWORD)
-    print('To set a password explicitly, start the server with an ADMIN_PASSWORD environment variable.\n')
-
 @app.route('/')
 def home_serve():
     return app.send_static_file('index.html')
@@ -38,7 +32,7 @@ def start():
         game = Game()
         game.player = request.args.get('player').strip()
         game.validate()
-        game.populate(2)
+        game.populate(10)
         game.validate()
 
         turns = []
@@ -99,11 +93,6 @@ def board():
         ranked_games.append(game)
         rank += 1
     return jsonify(games=[{'id':str(game.id),'started':game.started,'finished':game.finished,'score':game.score,'player':game.player,'rank':game.rank} for game in ranked_games])
-
-@app.route('/admin')
-def admin():
-    """The admin API endpoint"""
-    return Response(status=204)
 
 
 if __name__ == '__main__':
